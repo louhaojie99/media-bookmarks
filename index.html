@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自媒体创作</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "warm-bg": "#f7f9f5",
+              "warm-card": "#ffffff",
+              "warm-accent": "#6b9b5a",
+              "warm-accent-light": "#8ab87a",
+              "warm-text": "#3d4a35",
+              "warm-text-light": "#6b7a65",
+              "warm-border": "#e5ebe0",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-warm-bg min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-7xl">
+      <div class="max-w-md mx-auto mb-8">
+        <div class="relative">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="搜索链接..."
+            class="w-full pl-10 pr-4 py-3 bg-warm-card border border-warm-border rounded-xl text-warm-text placeholder-warm-text-light focus:outline-none focus:border-warm-accent focus:ring-2 focus:ring-warm-accent/20 transition-all"
+          />
+          <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-warm-text-light"></i>
+        </div>
+      </div>
+      <main id="bookmark-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      </main>
+    </div>
+    <script type="module" src="javascript/main.js"></script>
+  </body>
+</html>
